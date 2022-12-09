@@ -19,7 +19,8 @@
                                                   (All testings and changes should be done here)
                                                   (After ma finalize nimo imong changes copy and paste sa repository jud mismo and push)
                                                   for example naa kay image files:
-                                                  add it first sa imo local na copy and if ever mo work na upload your images na sa repository na files.
+                                                  add it first sa imo local na copy and 
+                                                  if ever mo work na upload your images na sa repository na files.
                                                   
 
 #Addtional Reminders
