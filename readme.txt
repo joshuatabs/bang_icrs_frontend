@@ -9,7 +9,7 @@
 -After all the screens are added by all group members, please clone repository.
 
 -Duplicate the repository so changes of your own files should only be applied locally and when changes are finalized,
- copy and paste new code inside the first copy to push changes.
+ copy and paste new code inside the repo clone to push changes.
  
  ex:
   bang_frontend(repository) - (dont npm install)
