@@ -1,7 +1,6 @@
 import './App.css';
-import ResponsiveAppBar from './components/global/navbar';
 import Schedule from './components/pages/Schedule'
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Rent from './components/pages/Rent';
 import Login from './components/pages/Login';
 import SignUpSide from './components/pages/Signup';

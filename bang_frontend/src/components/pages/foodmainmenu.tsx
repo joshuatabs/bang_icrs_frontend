@@ -1,5 +1,5 @@
 import '../css/Rian.css';
-import { Button, Avatar} from '@mui/material';
+import { Button} from '@mui/material';
 import ResponsiveAppBar from '../global/navbar';
 import Card, { MainMenuCardDetails } from '../global/MainMenuFoodCard';
 

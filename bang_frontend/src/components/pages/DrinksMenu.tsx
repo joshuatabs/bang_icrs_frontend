@@ -1,13 +1,6 @@
 import '../css/Rian.css';
 import Sidebar from '../global/sidebar';
-
-import { Route, Routes } from 'react-router-dom';
 import Card, { FoodCardDetails } from '../global/FoodCardDetails';
-
-
-
-
-
 
 const Foodlist:FoodCardDetails[] = [
   {title:'Coca Cola', image:'/static/images/Drinks/coke.png', description:'is a cold and carbonated soft drink manufactured by the Coca-Cola Company, Good to go with your food and meals. Try not to drink too much of it though! Helps keep you alert since it has caffeine'},

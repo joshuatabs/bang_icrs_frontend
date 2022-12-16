@@ -1,5 +1,4 @@
-import * as React from 'react';
-import {Avatar, Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
+import {Avatar, Button, TextField, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 
 function Copyright(props: any) {

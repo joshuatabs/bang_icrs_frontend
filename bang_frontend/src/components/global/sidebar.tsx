@@ -1,11 +1,8 @@
-import React, { useContext } from "react";
-
+import React from "react";
 import { SidebarData } from "./SideBarData";
 import "../css/Sidebar.css";
 import { Typography } from "@mui/material";
 import logo from '../logo/BangLogo.png';
-import { relative } from "path";
-
 
 const Sidebar: React.FC = () => {
     return (

@@ -1,6 +1,5 @@
 import '../css/Rian.css';
 import Sidebar from '../global/sidebar';
-import { Route, Routes } from 'react-router-dom';
 
 
 import Card, { FoodCardDetails } from '../global/FoodCardDetails';
