@@ -153,7 +153,7 @@ function ResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-              href="/link sa reservations"
+              href="/viewroom"
             >
               Your Reservation
             </Button>
