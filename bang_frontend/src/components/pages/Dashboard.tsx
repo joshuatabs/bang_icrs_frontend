@@ -1,5 +1,5 @@
-import ResponsiveAppBar from '../Components/TopNav';
-import Card, { CardDetails } from '../Components/TheCard';
+import ResponsiveAppBar from '../global/navbar';
+import Card, { CardDetails } from '../global/Card';
 import { Button } from '@mui/material';
 
 export default function Dashboard() {
