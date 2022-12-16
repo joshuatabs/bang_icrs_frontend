@@ -103,12 +103,13 @@ export default function SignUpSide() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "Green"}}
+                href='/'
               >
                 Sign Up
               </Button>
               <Grid container>
               </Grid>
-              <Link href="#" variant="body2">
+              <Link href="/" variant="body2">
                     {"Already have an account? Sign In"}
                   </Link>
               <Copyright sx={{ mt: 5 }} />
