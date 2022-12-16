@@ -22,5 +22,15 @@ export const SidebarData = [
     path: "/drinksmenu",
     icon: <LocalDrinkIcon></LocalDrinkIcon>
   },
+  {
+    title: "Add Food",
+    path: "/addfood",
+    icon: <LocalDrinkIcon></LocalDrinkIcon>
+  },
+  {
+    title: "Newly added Food",
+    path: "/newfood",
+    icon: <LocalDrinkIcon></LocalDrinkIcon>
+  },
  
 ];

@@ -10,17 +10,23 @@ export interface FoodCardDetails{
   title:string;
   image: string;
   description: string;
+  id : number;
 }
 
-export function onRemove(){
+
+
+export function onRemove(id:number){
   alert('Order removed!')
 }
 
-export function onOrder(){
+
+export function onOrder(id:number){
+  console.log(id)
   alert('Order added')
 }
 
 export default function FoodList(props:FoodCardDetails) {
+  
   return (
     <Card sx={{ maxWidth: 345, marginLeft: "1rem",  top: 100, borderRadius: 5, minWidth: 345, }}>
       <CardMedia
@@ -38,8 +44,8 @@ export default function FoodList(props:FoodCardDetails) {
         </Typography>
       </CardContent>
       <CardActions sx={{ color: 'white', backgroundColor: '#36393F'}}>
-        <Button variant="contained" sx={{ color: 'white', backgroundColor: '#7289DA', left: 10, fontFamily: 'Montserrat', fontWeight: 700, bottom:5 }} onClick={onOrder}>Order Now</Button>
-        <Button variant="contained" sx={{ color: 'white', backgroundColor: 'red', left: 40, fontFamily: 'Montserrat', fontWeight: 700, bottom:5 }} onClick={onRemove}>Remove Order</Button>
+        <Button variant="contained" sx={{ color: 'white', backgroundColor: '#7289DA', left: 10, fontFamily: 'Montserrat', fontWeight: 700, bottom:5 }} onClick={()=>onOrder(props.id)}>Order Now</Button>
+        <Button variant="contained" sx={{ color: 'white', backgroundColor: 'red', left: 40, fontFamily: 'Montserrat', fontWeight: 700, bottom:5 }} onClick={()=>onRemove(props.id)}>Remove Order</Button>
         
       </CardActions>
     </Card>
