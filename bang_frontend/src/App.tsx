@@ -12,6 +12,7 @@ import MealsMenu from './components/pages/MealsMenu';
 import FoodMainMenu from './components/pages/foodmainmenu';
 import FingerFoodMenu from './components/pages/FingerFoodMenu';
 import DrinksMenu from './components/pages/DrinksMenu';
+import RoomChoices from './components/pages/RoomChoices';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
         <Route path='/foodmainmenu' element={<FoodMainMenu/>}/>
         <Route path='/fingerfoodmenu' element={<FingerFoodMenu/>}/>
         <Route path='/drinksmenu' element={<DrinksMenu/>}/>
+        <Route path='/roomchoices' element={<RoomChoices/>}/>
       </Routes>
 
       <header className="App-header">

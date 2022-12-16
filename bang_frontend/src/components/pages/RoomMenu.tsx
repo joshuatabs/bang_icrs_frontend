@@ -1,5 +1,4 @@
 import '../css/Room.css';
-import { Button } from '@mui/material';
 import Card from '../global/RoomCard';
 import { CardDetails } from '../global/Card';
 import ResponsiveAppBar from '../global/navbar';
@@ -17,11 +16,11 @@ function RoomMenu() {
       <ResponsiveAppBar/>
 
       <header className="App-header">
-        <h1 style={{ width: 600, fontFamily: 'Montserrat', fontWeight: 600, fontStyle: 'bold', }}> Reserve a PC now!</h1>
-        <h5 style={{ fontWeight: 400, fontFamily: 'Montserrat' }}>Games | Food | Experience</h5>
-        <br></br>
+        <h1> Reserve a PC now!</h1>
 
-        <button className='btn'> Choose a Room! </button>
+        <h4>Games | Food | Experience</h4>
+
+        <a href='/roomchoices'><button className='btn2'> Choose a Room! </button></a>
 
         <br></br>
         

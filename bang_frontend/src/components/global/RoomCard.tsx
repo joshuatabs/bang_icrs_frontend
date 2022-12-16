@@ -2,8 +2,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
-import { IconButton, Stack } from '@mui/material';
 
 export interface CardDetails {
   title: string;
@@ -17,32 +15,30 @@ export default function iCard(props: CardDetails) {
       borderRadius: '10%',
       maxWidth: 400,
       textAlign: 'left',
-      marginBottom: '2rem',
+      marginBottom: '3rem',
       marginRight: '1rem',
+      marginTop: 'none',
       justifyContent: "center",
       alignItems: "center",
       width: 300,
-      height: 430,
+      height: 400,
+      boxShadow:'invert'
     }}>
       <br></br>
       <CardMedia
         component="img"
         height="250"
-
+        width="200"
         image={props.image}
         alt="image"
       />
-      <CardContent style={{ justifyContent: 'center' }}>
-        <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center' }}>
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div" sx={{textAlign: 'center'}}>
           {props.title}
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
-          {props.description}
-        </Typography>
-        <Stack alignItems="center">
-          <IconButton aria-label="next" size="large" sx={{}}>
-            <ArrowCircleRightRoundedIcon fontSize="inherit" /></IconButton>
-        </Stack>
+        <Typography variant="body2" color="text.secondary" sx={{textAlign: 'center'}}>
+         {props.description}
+        </Typography> 
       </CardContent>
     </Card>
   );
