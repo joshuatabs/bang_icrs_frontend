@@ -1,6 +1,6 @@
 import './App.css';
 import Schedule from './components/pages/Schedule'
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route, Link} from 'react-router-dom'
 import Rent from './components/pages/Rent';
 import Login from './components/pages/Login';
 import SignUpSide from './components/pages/Signup';
@@ -14,6 +14,8 @@ import DrinksMenu from './components/pages/DrinksMenu';
 import RoomChoices from './components/pages/RoomChoices';
 import Newlyaddedfood from './components/pages/newlyaddedfood';
 import AdditemForm from './components/pages/addfood';
+import { Payment } from '@mui/icons-material';
+import VeneuReservations from './components/pages/VenueReservations';
 
 
 function App() {
@@ -26,9 +28,11 @@ function App() {
         <Route path='/signup' element={<SignUpSide/>}/>
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/paymentmain' element={<PaymentMain/>}/>
+        <Route path='/payment' element={<Payment/>}/>
         <Route path='/roommenu' element={<RoomMenu/>}/>
         <Route path='/rent' element={<Rent/>}/>
         <Route path='/schedule' element={<Schedule/>}/>
+        <Route path='/venues' element={<VeneuReservations/>}/>
         <Route path='/mealsmenu' element={<MealsMenu/>}/>
         <Route path='/foodmainmenu' element={<FoodMainMenu/>}/>
         <Route path='/fingerfoodmenu' element={<FingerFoodMenu/>}/>
@@ -36,6 +40,7 @@ function App() {
         <Route path='/roomchoices' element={<RoomChoices/>}/>
         <Route path='/addfood' element={<AdditemForm/>}/>
         <Route path='/newfood' element={<Newlyaddedfood/>}/>
+
       </Routes>
 
       <header className="App-header">
