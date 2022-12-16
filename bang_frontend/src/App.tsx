@@ -40,7 +40,6 @@ function App() {
         <Route path='/roomchoices' element={<RoomChoices/>}/>
         <Route path='/addfood' element={<AdditemForm/>}/>
         <Route path='/newfood' element={<Newlyaddedfood/>}/>
-
       </Routes>
 
       <header className="App-header">
