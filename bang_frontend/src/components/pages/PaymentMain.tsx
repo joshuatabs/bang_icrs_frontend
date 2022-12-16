@@ -1,10 +1,10 @@
-import './App.css';
+import '../../App.css';
 import { Box, Button, ButtonGroup } from '@mui/material';
 import { useNavigate } from "react-router-dom";
 
 
 
-  function Main() {
+  function PaymentMain() {
     const navigate = useNavigate();
     
     
@@ -44,4 +44,4 @@ import { useNavigate } from "react-router-dom";
 
 
 
-export default Main;
+export default PaymentMain;
