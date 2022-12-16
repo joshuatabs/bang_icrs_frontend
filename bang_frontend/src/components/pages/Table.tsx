@@ -1,6 +1,4 @@
 import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
-import { Button} from '@mui/material';
-import ResponsiveAppBar from './ResponsiveAppBar';
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },

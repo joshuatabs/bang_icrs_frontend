@@ -6,9 +6,6 @@ import { Route, Routes } from 'react-router-dom';
 import Card, { FoodCardDetails } from '../global/FoodCardDetails';
 
 
-
-
-
 const Foodlist:FoodCardDetails[] = [
   {title:'Sisig', image:'/static/images/Meals/sisig.png', description:'a Filipino dish made from parts of a pigs face and belly and chicken liver which is usually seasoned with calamansi onions and chili peppers'},
   {title:'Jjampong', image:'/static/images/Meals/jjampong.png', description:'noodle soup with red, spicy seafood- or pork-based broth flavored with gochugaru. Tasty and Delicious!. Originated in South-Korea'},

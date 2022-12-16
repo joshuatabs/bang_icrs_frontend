@@ -5,11 +5,6 @@ import { BsCash } from "react-icons/bs";
 import { HiCash } from "react-icons/hi";
 import { useNavigate } from "react-router-dom";
 
-
-
-
-
-
 function Payment(){
   const navigate = useNavigate();
   return (
