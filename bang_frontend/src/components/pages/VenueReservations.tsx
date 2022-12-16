@@ -8,6 +8,13 @@ function VeneuReservations() {
     const DELETE_URL = 'http://localhost:8080/venue/deleteVenue/';
     const UPDATE_URL = 'http://localhost:8080/payment/updatePayment?paymentID=';
 
+    useEffect(() => {
+
+        setVenues([]);
+        GetVenues();
+
+    }, []);
+
     const [venues, setVenues] = useState([{
         venueid: '',
         date: '',
@@ -19,12 +26,9 @@ function VeneuReservations() {
         }
     }]);
 
-    useEffect(() => {
-
-        setVenues([]);
-        GetVenues();
-
-    }, []);
+    const Recall = () =>{
+        window.location.reload();
+    }
 
     const GetVenues = async () => {
 
@@ -42,9 +46,12 @@ function VeneuReservations() {
 
         if (res.data) {
             alert(res.data)
+            Recall();
         } else {
             alert("Failed to Delete Data");
         }
+
+        Recall();
 
     }
 
@@ -71,6 +78,8 @@ function VeneuReservations() {
                     console.log(err)
                 })
         }
+
+        Recall();
     }
 
     return (
@@ -101,8 +110,8 @@ function VeneuReservations() {
                                     <td>{venue.payment.type}</td>
                                     <td>{venue.payment.amount}</td>
                                     <td>{venue.date}</td>
-                                    <td><a><button className='btn3' onClick={() => UpdateVenue(venue.payment.type, venue.payment.paymentID)}>EDIT</button></a></td>
-                                    <td><a href='/venues'><button className='btn3' onClick={() => DeleteVenue(venue.venueid)}>DELETE</button></a></td>
+                                    <td><button className='btn3' onClick={() => UpdateVenue(venue.payment.type, venue.payment.paymentID)}>EDIT</button></td>
+                                    <td><button className='btn3' onClick={() => DeleteVenue(venue.venueid)}>DELETE</button></td>
                                 </tr>
 
 
