@@ -1,6 +1,7 @@
 import '../../App.css';
-import { Box, Button, ButtonGroup } from '@mui/material';
+import { Button } from '@mui/material';
 import { useNavigate } from "react-router-dom";
+import ResponsiveAppBar from '../global/navbar';
 
 
 
@@ -10,6 +11,9 @@ import { useNavigate } from "react-router-dom";
     
     return (
       <div className="App"> 
+
+      <ResponsiveAppBar/>
+
         <header className="App-header">
             <h1> Select Hours </h1>
       

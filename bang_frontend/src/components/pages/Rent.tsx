@@ -1,5 +1,6 @@
 import '../css/Rent.css';
 import Card, { CardDetails } from '../global/Card';
+import ResponsiveAppBar from '../global/navbar';
 
 function Rent() {
 
@@ -11,6 +12,8 @@ function Rent() {
 
   return (
     <div className="App">
+
+      <ResponsiveAppBar/>
 
       <header className="App-header">
 

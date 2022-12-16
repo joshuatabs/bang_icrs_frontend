@@ -1,4 +1,5 @@
 import '../css/Schedule.css';
+import ResponsiveAppBar from '../global/navbar';
 
 function Schedule() {
 
@@ -8,6 +9,8 @@ function Schedule() {
 
   return (
     <div className="App">
+
+      <ResponsiveAppBar/>
 
       <header className="App-header">
 
