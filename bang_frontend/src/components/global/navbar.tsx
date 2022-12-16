@@ -91,7 +91,7 @@ function ResponsiveAppBar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page} </Typography>
-                  
+
                 </MenuItem>
               ))}
             </Menu>
@@ -116,39 +116,39 @@ function ResponsiveAppBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2  }}
-                href="/link sa dashboard"
-              >
-                Home
-              </Button>
 
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' , fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-                href="/link sa reserve"
-              >
-                Reserve
-              </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              href="/dashboard"
+            >
+              Home
+            </Button>
 
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' , fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-                href="/foodmainmenu"
-              >
-                Cafe Menu
-              </Button>
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              href="/roommenu"
+            >
+              Reserve
+            </Button>
 
-              <Button
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' , fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-                href="/link sa reservations"
-              >
-                Your Reservation
-              </Button>
-           
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              href="/foodmainmenu"
+            >
+              Cafe Menu
+            </Button>
+
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              href="/link sa reservations"
+            >
+              Your Reservation
+            </Button>
+
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -174,9 +174,11 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
+                <a href='/'>
+                  <MenuItem key={setting} onClick={handleCloseUserMenu}>
+                    <Typography textAlign="center" color='black'>{setting}</Typography>
+                  </MenuItem>
+                </a>
               ))}
             </Menu>
           </Box>
