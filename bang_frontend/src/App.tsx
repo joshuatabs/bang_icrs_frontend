@@ -12,6 +12,8 @@ import FoodMainMenu from './components/pages/foodmainmenu';
 import FingerFoodMenu from './components/pages/FingerFoodMenu';
 import DrinksMenu from './components/pages/DrinksMenu';
 import RoomChoices from './components/pages/RoomChoices';
+import Newlyaddedfood from './components/pages/newlyaddedfood';
+import AdditemForm from './components/pages/addfood';
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
         <Route path='/fingerfoodmenu' element={<FingerFoodMenu/>}/>
         <Route path='/drinksmenu' element={<DrinksMenu/>}/>
         <Route path='/roomchoices' element={<RoomChoices/>}/>
+        <Route path='/addfood' element={<AdditemForm/>}/>
+        <Route path='/newfood' element={<Newlyaddedfood/>}/>
       </Routes>
 
       <header className="App-header">
