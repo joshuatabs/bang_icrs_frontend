@@ -20,7 +20,11 @@ function RoomMenu() {
         <h1 style={{ width: 600, fontFamily: 'Montserrat', fontWeight: 600, fontStyle: 'bold', }}> Reserve a PC now!</h1>
         <h5 style={{ fontWeight: 400, fontFamily: 'Montserrat' }}>Games | Food | Experience</h5>
         <br></br>
-        <Button variant="contained" sx={{ borderRadius: 4, color: 'white', backgroundColor: '#7289DA', right: 10, fontFamily: 'Montserrat', fontWeight: 'bold', bottom: 50, height: 70, width: 300 }}><h1>Choose a Room!</h1></Button>
+
+        <button className='btn'> Choose a Room! </button>
+
+        <br></br>
+        
         <div className='CARDS'>
           {RoomOptions.map((item, i) =>
             <Card key={i} title={item.title} image={item.image} description={item.description} />
