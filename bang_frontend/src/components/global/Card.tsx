@@ -11,7 +11,7 @@ export interface CardDetails{
 
 export default function iCard(props:CardDetails) {
   return (
-    <Card sx={{ borderRadius:'10%', maxWidth: 345, textAlign: 'left', marginBottom:'1rem', marginRight: '1rem', width: 300, height: 400, boxShadow:'invert'}}>
+    <Card sx={{ borderRadius:'10%', maxWidth: 345, textAlign: 'left', marginBottom:'1rem', marginRight: '1rem', width: 300, height: 360, boxShadow:'invert'}}>
       <CardMedia
         component="img"
         height="240"

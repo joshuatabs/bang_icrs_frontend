@@ -1,6 +1,6 @@
 import './App.css';
 import Schedule from './components/pages/Schedule'
-import {Routes, Route, Link} from 'react-router-dom'
+import {Routes, Route} from 'react-router-dom'
 import Rent from './components/pages/Rent';
 import Login from './components/pages/Login';
 import SignUpSide from './components/pages/Signup';
@@ -16,6 +16,10 @@ import Newlyaddedfood from './components/pages/newlyaddedfood';
 import AdditemForm from './components/pages/addfood';
 import { Payment } from '@mui/icons-material';
 import VeneuReservations from './components/pages/VenueReservations';
+import ViewRoom from './components/pages/Admin/ViewRoom';
+import AddRoom from './components/pages/Admin/AddRoom';
+import EditRoom from './components/pages/Admin/EditRoom';
+import DeleteRoom from './components/pages/Admin/DeleteRoom';
 
 
 function App() {
@@ -40,6 +44,10 @@ function App() {
         <Route path='/roomchoices' element={<RoomChoices/>}/>
         <Route path='/addfood' element={<AdditemForm/>}/>
         <Route path='/newfood' element={<Newlyaddedfood/>}/>
+        <Route path='/viewroom' element={<ViewRoom/>}/>
+        <Route path='/addroom' element={<AddRoom/>}/>
+        <Route path='/editroom' element={<EditRoom/>}/>
+        <Route path='/deleteroom' element={<DeleteRoom/>}/>
       </Routes>
 
       <header className="App-header">
