@@ -2,6 +2,7 @@ import * as React from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import {Avatar, Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
+import logo from '../logo/BangLogo.png';
 
 function Copyright(props: any) {
   return (
@@ -46,8 +47,7 @@ export default function SignInSide() {
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
-            </Avatar>
+            <img style={{ width: 80, height: 80 }} src={logo} alt="Logo" />
             <Typography component="h1" variant="h4">
               Sign In
             </Typography>
