@@ -108,7 +108,7 @@ function AdminResponsiveAppBar() {
               flexGrow: 1,
               fontFamily: 'Montserrat',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.7rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -119,7 +119,7 @@ function AdminResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
               href="/dashboard"
             >
               View Room
@@ -127,7 +127,7 @@ function AdminResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
               href="/roommenu"
             >
               Add Room
@@ -135,7 +135,7 @@ function AdminResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
               href="/rent"
             >
               Edit Room
@@ -143,7 +143,7 @@ function AdminResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
               href="/foodmainmenu"
             >
               Delete Room
