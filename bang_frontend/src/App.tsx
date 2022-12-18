@@ -18,8 +18,6 @@ import { Payment } from '@mui/icons-material';
 import VeneuReservations from './components/pages/VenueReservations';
 import ViewRoom from './components/pages/Admin/ViewRoom';
 import AddRoom from './components/pages/Admin/AddRoom';
-import EditRoom from './components/pages/Admin/EditRoom';
-import DeleteRoom from './components/pages/Admin/DeleteRoom';
 import AdminLogin from './components/pages/Admin/AdminLogin';
 
 
@@ -47,8 +45,6 @@ function App() {
         <Route path='/newfood' element={<Newlyaddedfood/>}/>
         <Route path='/viewroom' element={<ViewRoom/>}/>
         <Route path='/addroom' element={<AddRoom/>}/>
-        <Route path='/editroom' element={<EditRoom/>}/>
-        <Route path='/deleteroom' element={<DeleteRoom/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
       </Routes>
 
