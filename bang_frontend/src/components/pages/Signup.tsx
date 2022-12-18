@@ -1,5 +1,6 @@
 import {Avatar, Button, TextField, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
-import {createTheme, ThemeProvider } from '@mui/material/styles';
+import axios from 'axios';
+import { useState } from 'react';
 
 function Copyright(props: any) {
   return (
@@ -14,11 +15,46 @@ function Copyright(props: any) {
   );
 }
 
-const theme = createTheme();
-
 export default function SignUpSide() {
+  const [fname, setFname] = useState('');
+    const [lname, setLname] = useState('');
+    const [user, setUser] =  useState('');
+    const [pass, setPass] = useState('');
+    const [email, setEmail] = useState('');
+    const [userInfo, setUserInfo] = useState({});
+    const [logged, setLogged] = useState(false);
+
+  const SignUp = async () => {
+    console.log(user)
+    console.log(pass)
+
+    axios
+        .post('http://localhost:8080/user/postUser',
+        {
+          username: user,
+          password: pass,
+          firstname: fname,
+          lastname: lname,
+          email: email
+        }
+        )
+        .then(res => {
+            setUserInfo(res.data);
+            if(res.data){
+                setLogged(true);
+                alert("User Registered")
+            }
+            console.log(userInfo)
+            console.log(logged)
+            console.log(res.data)
+        })
+        .catch(err =>{
+            console.log(err)
+        })
+
+  }
+  
   return (
-    <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
@@ -56,6 +92,8 @@ export default function SignUpSide() {
                 type="firstname"
                 id="fname"
                 autoComplete="firstname"
+                autoFocus
+                onChange={e => setFname(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -66,6 +104,7 @@ export default function SignUpSide() {
                 type="lastname"
                 id="lname"
                 autoComplete="lastname"
+                onChange={e => setLname(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -75,7 +114,7 @@ export default function SignUpSide() {
                 label="Username"
                 name="username"
                 autoComplete="username"
-                autoFocus
+                onChange={e => setUser(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -86,6 +125,7 @@ export default function SignUpSide() {
                 type="password"
                 id="password"
                 autoComplete="current-password"
+                onChange={e => setPass(e.target.value)}
               />
               <TextField
                 margin="normal"
@@ -95,14 +135,14 @@ export default function SignUpSide() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
-                autoFocus
+                onChange={e => setEmail(e.target.value)}
               />
               <Button
                 type="submit"
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "Green"}}
-                href='/'
+                onClick={()=>SignUp()}
               >
                 Sign Up
               </Button>
@@ -116,6 +156,5 @@ export default function SignUpSide() {
           </Box>
         </Grid>
       </Grid>
-    </ThemeProvider>
   );
 }
