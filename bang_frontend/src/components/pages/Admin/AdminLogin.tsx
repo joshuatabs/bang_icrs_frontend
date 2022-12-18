@@ -1,5 +1,5 @@
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {Avatar, Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
+import {Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import '../../css/Admin.css';
 import logo from '../../logo/BangLogo.png';
@@ -81,7 +81,7 @@ export default function SignInSide() {
                 fullWidth
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "Green" }}
-                href ='/dashboard'
+                href ='/viewroom'
               >
                 Login
               </Button>

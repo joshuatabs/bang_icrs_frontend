@@ -123,3 +123,41 @@
     word-spacing: 10px;
   }
   
+  table {
+    border: 1px solid;
+  }
+
+  th{
+    text-align: center;
+    border: 1px solid;
+    width: 400px;
+    justify-content: center;
+  }
+
+  td{
+    text-align: left;
+    border: 1px solid;
+  }
+
+  .tbl {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 90%;
+  }
+  
+  .tbl td, .tbl th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .tbl tr:nth-child(even){background-color: #282c34;}
+  
+  .tbl tr:hover {background-color: rgb(97, 97, 97);}
+  
+  .tbl th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3a638d;
+    color: white;
+  }

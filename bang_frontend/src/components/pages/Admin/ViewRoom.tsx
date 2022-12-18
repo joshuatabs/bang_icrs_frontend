@@ -2,7 +2,7 @@ import '../../css/Room.css';
 import AdminNavbar from '../../global/AdminNavbar';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import '../../css/reservations.css';
+import '../../css/Admin.css';
 
 function ViewRoom() {
 
@@ -19,11 +19,8 @@ function ViewRoom() {
 
   const [venues, setVenues] = useState([{
       roomid: '',
-      payment: {
-          type: '',
-          amount: '',
-          paymentID: '',
-      }
+      roomtype: '',
+      floor: '',
   }]);
 
   const Recall = () =>{
@@ -55,19 +52,19 @@ function ViewRoom() {
 
   }
 
-  const UpdateVenue = async (type: string, payment_id: string) => {
+  const UpdateVenue = async (roomtype: string, room_id: string) => {
 
-      console.log(type)
-      console.log(payment_id)
+      console.log(roomtype)
+      console.log(room_id)
 
       const amount = prompt('Enter New Value');
 
-      if (amount != '') {
+      if (amount !== '') {
 
           axios
-              .put(UPDATE_URL + '' + payment_id, {
-                  type,
-                  amount,
+              .put(UPDATE_URL + '' + room_id, {
+                roomtype,
+                amount,
               })
               .then(res => {
                   if (res.data) {
@@ -107,12 +104,11 @@ function ViewRoom() {
 
                               <tr key={i}>
                                   <td>{venue.roomid}</td>
-                                  <td>{venue.payment.type}</td>
-                                  <td>{venue.payment.amount}</td>
-                                  <td><button className='btn3' onClick={() => UpdateVenue(venue.payment.type, venue.payment.paymentID)}>EDIT</button></td>
+                                  <td>{venue.roomtype}</td>
+                                  <td>{venue.floor}</td>
+                                  <td><button className='btn3' onClick={() => UpdateVenue(venue.roomtype, venue.floor)}>EDIT</button></td>
                                   <td><button className='btn3' onClick={() => DeleteVenue(venue.roomid)}>DELETE</button></td>
                               </tr>
-
 
                           )}
                       </tbody>
