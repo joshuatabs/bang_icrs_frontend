@@ -3,23 +3,20 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
-export interface CardDetails {
-  title: string;
-  image: string;
-  description: string;
+export interface CardDetails{
+    title:string;
+    image: string;
+    description: string;
 }
 
-export default function iCard(props: CardDetails) {
+export default function RoomCard(props:CardDetails) {
   return (
     <Card sx={{
       borderRadius: '10%',
-      maxWidth: 400,
+      maxWidth: 345,
       textAlign: 'left',
-      marginBottom: '3rem',
+      marginBottom: '1rem',
       marginRight: '1rem',
-      marginTop: 'none',
-      justifyContent: "center",
-      alignItems: "center",
       width: 300,
       height: 400,
       boxShadow:'invert'
@@ -27,8 +24,7 @@ export default function iCard(props: CardDetails) {
       <br></br>
       <CardMedia
         component="img"
-        height="250"
-        width="200"
+        height="240"
         image={props.image}
         alt="image"
       />

@@ -108,7 +108,7 @@ function AdminResponsiveAppBar() {
               flexGrow: 1,
               fontFamily: 'Montserrat',
               fontWeight: 700,
-              letterSpacing: '.3rem',
+              letterSpacing: '.7rem',
               color: 'inherit',
               textDecoration: 'none',
             }}
@@ -119,32 +119,32 @@ function AdminResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-              href="/dashboard"
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
+              href="/viewroom"
             >
               View Room
             </Button>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-              href="/roommenu"
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
+              href="/addroom"
             >
               Add Room
             </Button>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-              href="/rent"
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
+              href="/editroom"
             >
               Edit Room
             </Button>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
-              href="/foodmainmenu"
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
+              href="/deleteroom"
             >
               Delete Room
 

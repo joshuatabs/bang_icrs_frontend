@@ -1,15 +1,15 @@
 import '../css/Room.css';
-import Card from '../global/RoomCard';
-import { CardDetails } from '../global/Card';
 import ResponsiveAppBar from '../global/navbar';
+import Card, { CardDetails } from '../global/Card';
 
-const RoomOptions: CardDetails[] = [
-  { title: 'Private Room', image: '/static/images/Room/private.png', description: ' Get a room for yourself and away from the crowded people!' },
-  { title: 'Public Room', image: '/static/images/Room/public.png', description: 'Play with other people and enjoy the vibes!' },
-  { title: 'Tournament Room', image: '/static/images/Room/tournament.jpg', description: 'Compete with your friends and with other people!' },
-]
+export default function RoomMenu() {
 
-function RoomMenu() {
+  const RoomCard:CardDetails[] = [
+    { title: 'Private Room', image: '/static/images/Room/private.png', description: ' Get a room for yourself and away from the crowded people!' },
+    { title: 'Public Room', image: '/static/images/Room/public.png', description: 'Play with other people and enjoy the vibes!' },
+    { title: 'Tournament Room', image: '/static/images/Room/tournament.jpg', description: 'Compete with your friends and with other people!' },
+  ]
+
   return (
     <div className="App">
       
@@ -25,7 +25,7 @@ function RoomMenu() {
         <br></br>
         
         <div className='CARDS'>
-          {RoomOptions.map((item, i) =>
+          {RoomCard.map((item, i) =>
             <Card key={i} title={item.title} image={item.image} description={item.description} />
           )}
         </div>
@@ -33,5 +33,3 @@ function RoomMenu() {
     </div>
   );
 }
-
-export default RoomMenu;
