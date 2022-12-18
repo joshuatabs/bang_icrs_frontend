@@ -19,6 +19,7 @@ import VeneuReservations from './components/pages/VenueReservations';
 import ViewRoom from './components/pages/Admin/ViewRoom';
 import AddRoom from './components/pages/Admin/AddRoom';
 import AdminLogin from './components/pages/Admin/AdminLogin';
+import AboutUs from './components/pages/AboutUs';
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path='/viewroom' element={<ViewRoom/>}/>
         <Route path='/addroom' element={<AddRoom/>}/>
         <Route path='/adminlogin' element={<AdminLogin/>}/>
+        <Route path='/about' element={<AboutUs/>}/>
       </Routes>
 
       <header className="App-header">

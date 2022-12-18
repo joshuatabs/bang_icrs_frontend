@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../logo/BangLogo.png';
 
-const pages = ['Home', 'Reserve', 'Cafe Menu', 'Rent Venue', 'Your Reservations'];
+const pages = ['Home', 'Reserve', 'Cafe Menu', 'Rent Venue', 'Your Reservations', 'About Us'];
 const settings = ['Logout'];
 
 function ResponsiveAppBar() {
@@ -156,6 +156,14 @@ function ResponsiveAppBar() {
               href="/yourreservation"
             >
               Your Reservation
+            </Button>
+
+            <Button
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              href="/about"
+            >
+              About Us
             </Button>
 
           </Box>
