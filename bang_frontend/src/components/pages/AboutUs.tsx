@@ -21,7 +21,7 @@ export default function About() {
                 <ResponsiveAppBar />
                 <header className="App-header">
                     <h1> OUR STORY </h1>
-                    <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center', paddingLeft: "50px", paddingRight: "50px", marginLeft: "100px", marginRight: "100px" }}>
+                    <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingLeft: "50px", paddingRight: "50px", marginLeft: "100px", marginRight: "100px" }}>
                         ‘Bang!’ is a feature-packed internet café reservation management system where we put more emphasis on the amount of time the customer uses the PC rather than standing up to order something or waiting in line for a vacant PC. Reserve now and play non-stop.
                     </Typography>
                     <br></br>
@@ -44,8 +44,8 @@ export default function About() {
                         </motion.a>
                     </div>
                     <br></br>
-                    <h1> MORE FROM US... </h1>
-                    <Typography gutterBottom variant="h4" component="div" sx={{ textAlign: 'center', paddingLeft: "50px", paddingRight: "50px", marginLeft: "100px", marginRight: "100px" }}>
+                    <h2> MORE FROM US... </h2>
+                    <Typography gutterBottom variant="h5" component="div" sx={{ textAlign: 'center', paddingLeft: "50px", paddingRight: "50px", marginLeft: "100px", marginRight: "100px" }}>
                         At 'Bang!', we understand that time is valuable, especially when you're looking to enjoy a gaming or online experience at an internet café. 
                         That's why we've developed a reservation management system that puts more emphasis on the amount of time you spend on the PC, rather than standing in line or waiting for a vacant machine.
                         With 'Bang!', you can reserve your spot in advance and play non-stop without any interruptions.
