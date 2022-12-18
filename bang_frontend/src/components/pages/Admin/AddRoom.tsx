@@ -21,8 +21,7 @@ export default function AddRoom() {
           <button onClick={room} className='btn'>Public Room</button> 
           <button onClick={room} className='btn'>Private Room</button> 
         </div>
-
-
+ 
         <div className='choices3'>
           <button onClick={room} className='btn'>Tournament Room</button> 
         </div>

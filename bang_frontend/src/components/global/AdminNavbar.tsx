@@ -120,7 +120,7 @@ function AdminResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/dashboard"
+              href="/viewroom"
             >
               View Room
             </Button>
@@ -128,7 +128,7 @@ function AdminResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/roommenu"
+              href="/addroom"
             >
               Add Room
             </Button>
@@ -136,7 +136,7 @@ function AdminResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/rent"
+              href="/editroom"
             >
               Edit Room
             </Button>
@@ -144,7 +144,7 @@ function AdminResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/foodmainmenu"
+              href="/deleteroom"
             >
               Delete Room
 
