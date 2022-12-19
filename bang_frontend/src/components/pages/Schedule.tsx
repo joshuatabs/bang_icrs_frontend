@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { useState } from 'react';
 import '../css/Schedule.css';
 import ResponsiveAppBar from '../global/navbar';
 
@@ -19,9 +18,9 @@ function Schedule() {
 
           alert("Successfully Rented!");
 
-          alert("Reservation Details"+ 
-                "\n  Date of Reservation: "
-                +res.data.date+"\n  Reservation Type: "+res.data.payment.type
+          alert("Reservation Details:"
+                +"\n  Date of Reservation: "+res.data.date
+                +"\n  Reservation Type: "+res.data.payment.type
                 +"\n  Duration: "+duration
                 +"\n  Total Amount Paid: PHP"+res.data.payment.amount);
 

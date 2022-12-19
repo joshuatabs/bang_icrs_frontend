@@ -1,4 +1,4 @@
-import '../css/room.css';
+import '../css/Room.css';
 import ResponsiveAppBar from '../global/navbar';
 import Card, { CardDetails } from '../global/Card';
 

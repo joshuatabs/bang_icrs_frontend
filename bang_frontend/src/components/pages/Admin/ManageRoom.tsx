@@ -2,7 +2,7 @@ import AdminNavbar from '../../global/AdminNavbar';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../../css/Admin.css';
-import '../../css/room.css'
+import '../../css/Room.css'
 
 function ManageRoom() {
 
