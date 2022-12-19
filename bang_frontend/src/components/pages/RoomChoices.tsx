@@ -1,6 +1,6 @@
 import axios from 'axios';
-import '../css/Room.css';
 import ResponsiveAppBar from '../global/navbar';
+import '../css/room.css';
 
 function RoomChoices() {
 
