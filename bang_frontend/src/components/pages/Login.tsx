@@ -1,6 +1,6 @@
 import * as React from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {Avatar, Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline, IconButton, InputAdornment } from '@mui/material';
+import {Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline, IconButton, InputAdornment } from '@mui/material';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import logo from '../logo/BangLogo.png';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
