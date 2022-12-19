@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { useState } from 'react';
 import '../css/Schedule.css';
 import ResponsiveAppBar from '../global/navbar';
 
@@ -55,8 +54,7 @@ function Schedule() {
         <div>
           <button onClick={() => Rent('30000')} className='btn'>A Week</button> 
         </div>
-
-
+        
         <br></br>
 
       </header>
