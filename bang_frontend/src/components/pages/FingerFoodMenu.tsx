@@ -26,8 +26,6 @@ function FingerFoodMenu(){
     
     <div className="RianApp">
 
-      
-
       <div className='Sidebar'><Sidebar></Sidebar></div>
        
       <div className='RIANCARDS'>
@@ -41,7 +39,6 @@ function FingerFoodMenu(){
           )}
         </div>
         
-
     </div>
   );
 }
