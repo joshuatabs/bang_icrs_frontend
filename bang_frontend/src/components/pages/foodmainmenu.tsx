@@ -28,7 +28,7 @@ function FoodMainMenu(){
         <h1 style={{width:700, fontFamily: 'Montserrat', fontWeight:800, fontStyle: 'bold',}}> The best gamers require the greatest meals</h1>
         <h5 style={{fontWeight:400, fontFamily: 'Montserrat'}}>Games | Food | Experience</h5>
         <br></br>
-        <a href='/fingerfoodmenu'><Button variant="contained" sx={{ borderRadius: 5,color: 'white', backgroundColor: '#7289DA',  fontFamily: 'Montserrat', fontWeight: 'bold', bottom:50, height:70, width:275}}><h1>Explore Menu</h1></Button></a>
+        <a href='/fingerfoodmenu'><Button variant="contained" sx={{ borderRadius: 5,color: 'white', backgroundColor: 'transparent', border:4,   fontFamily: 'MontserratRoobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"', fontWeight: 'bold', bottom:50, height:70, width:275}}><h1>Explore Menu</h1></Button></a>
 
         <div className='MAINCARDS'>
           {FoodMenu.map((item, i)=>
