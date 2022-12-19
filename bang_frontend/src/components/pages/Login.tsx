@@ -1,8 +1,10 @@
 import * as React from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import {Avatar, Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline } from '@mui/material';
+import {Avatar, Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline, IconButton, InputAdornment } from '@mui/material';
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import logo from '../logo/BangLogo.png';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
+import { useState } from 'react';
 
 function Copyright(props: any) {
   return (
@@ -20,7 +22,9 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignInSide() {
-
+  const [showPassword, setShowPassword] = useState(false);
+  const handleClickShowPassword = () => setShowPassword(!showPassword);
+  const handleMouseDownPassword = () => setShowPassword(!showPassword);
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
@@ -31,7 +35,7 @@ export default function SignInSide() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: "images/pc_room.jpg",
+            backgroundImage: "url(/static/images/Landing/bgpic.jpg)",
             backgroundRepeat: 'no-repeat',
             backgroundColor: "White",
             backgroundSize: 'cover',
@@ -56,10 +60,10 @@ export default function SignInSide() {
                 margin="normal"
                 required
                 fullWidth
-                id="email"
-                label="Email Address"
-                name="email"
-                autoComplete="email"
+                id="user"
+                label="Username"
+                name="username"
+                autoComplete="user"
                 autoFocus
               />
               <TextField
@@ -68,9 +72,21 @@ export default function SignInSide() {
                 fullWidth
                 name="password"
                 label="Password"
-                type="password"
+                type={showPassword ? 'text' : 'password'}
                 id="password"
                 autoComplete="current-password"
+                InputProps={{
+                  endAdornment: (
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                      >
+                        {showPassword ? <Visibility /> : <VisibilityOff />}
+                      </IconButton>
+                    </InputAdornment>
+                  )
+                }}
               />
               <FormControlLabel
                 control={<Checkbox value="remember" color="primary" />}

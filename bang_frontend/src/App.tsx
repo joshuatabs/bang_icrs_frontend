@@ -47,10 +47,6 @@ function App() {
         <Route path='/adminlogin' element={<AdminLogin/>}/>
         <Route path='/about' element={<AboutUs/>}/>
       </Routes>
-
-      <header className="App-header">
-
-      </header>
     </div>
   );
 }
