@@ -20,7 +20,7 @@ function FoodMainMenu(){
         <h1 style={{width:700, fontFamily: 'Segoe UI'}}> The best gamers require the greatest meals</h1>
         <br></br>
         
-        <a href='/fingerfoodmenu'><button className='btn'>Explore Menu</button></a>
+        <a href='/fingerfoodmenu'><button className='btn5'>Explore Menu</button></a>
 
         <div className='MAINCARDS'>
           {FoodMenu.map((item, i)=>
