@@ -1,64 +1,85 @@
 .App {
-    text-align: left;
-  }
-  
-  .App-header {
-    background-color: #282c34;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: calc(10px + 2vmin);
-    color: white;
-    justify-content: center;
-  }
-  
-  .App-link {
-    color: #61dafb;
-  }
-  
-  .CARDS{
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-  }
+  text-align: left;
+  align-items: center;
+}
 
-  table {
-    border: 1px solid;
-  }
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  align-items: center;
+}
 
-  th{
-    text-align: left;
-    border: 1px solid;
-    width: 400px;
-  }
+.App-link {
+  color: #61dafb;
+}
 
-  td{
-    text-align: left;
-    border: 1px solid;
-  }
+.CARDS {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+}
 
-  .tbl {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  .tbl td, .tbl th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  .tbl tr:nth-child(even){background-color: #282c34;}
-  
-  .tbl tr:hover {background-color: rgb(97, 97, 97);}
-  
-  .tbl th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #3a638d;
-    color: white;
-  }
+.table{
+  margin-top: 9rem;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.tbl{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border: 1px solid;
+}
+
+th {
+  text-align: left;
+  border: 1px solid;
+  width: 400px;
+}
+
+td {
+  text-align: left;
+  border: 1px solid;
+}
+
+.tbl {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tbl td,
+.tbl th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.tbl tr:nth-child(even) {
+  background-color: #282c34;
+}
+
+.tbl tr:hover {
+  background-color: rgb(97, 97, 97);
+}
+
+.tbl th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #3a638d;
+  color: white;
+}
 
 /* CSS */
 .btn3 {
@@ -69,7 +90,7 @@
   color: #0d172a;
   cursor: pointer;
   display: inline-block;
-  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-family: "Basier circle", -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1rem;
   font-weight: 600;
   line-height: 1;
