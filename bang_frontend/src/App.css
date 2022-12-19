@@ -48,9 +48,9 @@
 
 .footer{
   color: rgb(255, 255, 255);
-  background-color: #5f8ab8;
+  background-color: #000000;
   width: 100%;
-  opacity: 40%;
+  opacity: 20%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: small;
 }
