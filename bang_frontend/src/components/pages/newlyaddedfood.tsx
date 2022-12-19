@@ -1,12 +1,8 @@
 import '../css/Rian.css';
 import Sidebar from '../global/sidebar';
-import Card, { FoodCardDetails } from '../global/FoodCardDetails';
-import { Route, Routes } from 'react-router-dom';
+import Card from '../global/FoodCardDetails';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Button } from '@mui/material';
-import { arrayBuffer } from 'node:stream/consumers';
-import { Splitscreen } from '@mui/icons-material';
 
 
 

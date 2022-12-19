@@ -1,4 +1,3 @@
-import * as React from 'react';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import {Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBaseline, IconButton, InputAdornment } from '@mui/material';
 import {createTheme, ThemeProvider } from '@mui/material/styles';

@@ -1,5 +1,5 @@
 import '../css/list.css'
-import React, { Component } from 'react';
+import { Component } from 'react';
 import ReservationService from '../services/ListService.js';
 import AdminResponsiveAppBar from './components/AdminResponsiveAppBar';
 import swal from 'sweetalert';

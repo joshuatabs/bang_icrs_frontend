@@ -1,6 +1,5 @@
 import '../css/Rian.css';
 import Card, { FoodCardDetails } from '../global/FoodCardDetails';
-
 import Sidebar from '../global/sidebar';
 
 

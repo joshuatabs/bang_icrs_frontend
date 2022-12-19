@@ -1,7 +1,7 @@
 import '../css/create.css';
 import { Component } from 'react';
 import ListService from '../services/ListService';
-import { Link, useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 import swal from 'sweetalert';
 import ResponsiveAppBar from "./ResponsiveAppBar";
 
