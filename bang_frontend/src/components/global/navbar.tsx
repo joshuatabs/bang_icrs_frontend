@@ -118,7 +118,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
               href="/dashboard"
             >
               Home
@@ -126,7 +126,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
               href="/roommenu"
             >
               Reserve
@@ -134,7 +134,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
               href="/rent"
             >
               Rent Venue
@@ -142,7 +142,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
               href="/foodmainmenu"
             >
               Cafe Menu
@@ -151,7 +151,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
               href="/yourreservation"
             >
               Your Reservation
@@ -159,7 +159,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
               href="/about"
             >
               About Us
