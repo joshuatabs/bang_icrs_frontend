@@ -86,11 +86,9 @@ function VeneuReservations() {
         <div className="App">
 
             <header className="App-header">
-
-                <br></br>
-
+                
+                <a href='/adminmenu'>Back to Admin Menu</a>
                 <div className='table'>
-
                     <table className='tbl'>
 
                         <tbody>

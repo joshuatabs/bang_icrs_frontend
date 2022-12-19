@@ -22,6 +22,7 @@ import AboutUs from './components/pages/AboutUs';
 import { useMemo, useState } from 'react';
 import { UserContext } from './UserContext';
 import LandingPage from './components/pages/LandingPage';
+import AdminMenu from './components/pages/Admin/AdminMenu';
 
 
 function App() {
@@ -61,7 +62,7 @@ function App() {
           <Route path='/manageroom' element={<ManageRoom />} />
           <Route path='/adminlogin' element={<AdminLogin />} />
           <Route path='/about' element={<AboutUs />} />
-          <Route path='/adminmenu' element={<LandingPage />} />
+          <Route path='/adminmenu' element={<AdminMenu />} />
         </Routes>
 
       </UserContext.Provider>

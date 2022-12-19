@@ -45,7 +45,7 @@ function AdminResponsiveAppBar() {
             variant="h5"
             noWrap
             component="a"
-            href="/viewroom"
+            href="/adminmenu"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -128,7 +128,7 @@ function AdminResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 124 }}
-              href="/manageroom"
+              href="/adminmenu"
             >
               ADMIN
             </Button>
