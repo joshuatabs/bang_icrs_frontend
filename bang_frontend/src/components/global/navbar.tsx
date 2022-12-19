@@ -90,8 +90,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page} </Typography>
-
+                  <Typography key={page} textAlign="center">{page} </Typography>
                 </MenuItem>
               ))}
             </Menu>
@@ -191,9 +190,9 @@ function ResponsiveAppBar() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <a href='/'>
+                <a href='/' key={setting}>
                   <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center" color='black'>{setting}</Typography>
+                    <Typography key={setting} textAlign="center" color='black'>{setting}</Typography>
                   </MenuItem>
                 </a>
               ))}
