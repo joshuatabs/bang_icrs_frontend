@@ -21,7 +21,7 @@ function Payment(){
 
         <div className='choices1'>
          <Button className='btn' >Purchase</Button>
-         <Button onClick = {()=>{navigate('/Main');}} className='btn' >Cancel</Button>
+         <Button onClick = {()=>{navigate('/Create');}} className='btn' >Cancel</Button>
          </div>
 
 
