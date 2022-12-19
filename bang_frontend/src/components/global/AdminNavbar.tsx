@@ -120,17 +120,17 @@ function AdminResponsiveAppBar() {
             <Button
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/viewroom"
+              href="/manageroom"
             >
-              View Room
+              Manage Room
             </Button>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/addroom"
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 124 }}
+              href="/manageroom"
             >
-              Add Room
+              ADMIN
             </Button>
 
           </Box>

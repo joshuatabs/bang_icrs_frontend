@@ -4,7 +4,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../../css/Admin.css';
 
-function ViewRoom() {
+function ManageRoom() {
 
   const GET_URL = 'http://localhost:8080/room/getAllRoom';
   const DELETE_URL = 'http://localhost:8080/room/deleteRoom/';
@@ -54,11 +54,11 @@ function ViewRoom() {
 
   const UpdateRoom = async (room_id: string) => {
 
+    const code = prompt('Enter New Room Type:');
+    const floor = prompt('Enter New Floor:');
+ 
       console.log(code)
       console.log(room_id)
-
-      const floor = prompt('Enter New Floor');
-      const code = prompt('Enter New Code');
 
       if (floor !== '') {
 
@@ -69,7 +69,7 @@ function ViewRoom() {
               })
               .then(res => {
                   if (res.data) {
-                      alert("Successfully Rented!" + JSON.stringify(res.data));
+                      alert("Successfully Edited!" + JSON.stringify(res.data));
                   }
               })
               .catch(err => {
@@ -107,8 +107,8 @@ function ViewRoom() {
                                   <td>{room.roomid}</td>
                                   <td>{room.code}</td>
                                   <td>{room.floor}</td>
-                                  <td><button className='btn3' onClick={() => UpdateRoom(room.roomid)}>EDIT</button></td>
-                                  <td><button className='btn3' onClick={() => DeleteRoom(room.roomid)}>DELETE</button></td>
+                                  <td><button className='btn3' onClick={() => UpdateRoom(room.roomid)}>Edit</button></td>
+                                  <td><button className='btn3' onClick={() => DeleteRoom(room.roomid)}>Delete</button></td>
                               </tr>
 
                           )}
@@ -122,4 +122,4 @@ function ViewRoom() {
   );
 }
 
-export default ViewRoom;
+export default ManageRoom;
