@@ -7,12 +7,10 @@ function LandingPage() {
 
             <div className='logoDiv'>
                 <img src='/static/images/BangLogo.png' className='logo' />
-                <div className='welcome'> <h1>HELLO ADMIN</h1> <p className='tag'>Welcome To The Admin Menu!</p></div>
+                <div className='welcome'> <h1>HELLO ADMIN</h1></div>
             </div>
 
             <div className='adminmenu'>
-
-                MANAGE
 
                 <div className='choices1'>
                     <a href='/venues'><button className='btn'>VENUE RESERVATIONS</button></a>
@@ -21,8 +19,9 @@ function LandingPage() {
 
                 <div className='choices1'>
                     <a href='/addfood'><button className='btn'>ADD NEW FOOD</button></a>
-                    <a href='/newfood'><button className='btn'>NEW FOOD MENU</button></a>
                 </div>
+
+                <a href='/'><button className='btn'>EXIT</button></a>
 
             </div>
 
