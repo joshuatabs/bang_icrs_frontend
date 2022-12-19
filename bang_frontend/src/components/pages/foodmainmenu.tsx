@@ -17,10 +17,13 @@ function FoodMainMenu(){
        <ResponsiveAppBar></ResponsiveAppBar>
         <header className="App-header">
 
-        <h1 style={{width:700, fontFamily: 'Segoe UI'}}> The best gamers require the greatest meals</h1>
+        <h1>ORDER YOUR SNACKS!</h1>
+
         <br></br>
         
-        <a href='/fingerfoodmenu'><button className='btn5'>Explore Menu</button></a>
+        <a href='/fingerfoodmenu'><button className='btn5'>EXPLORE MENU</button></a>
+
+        <br></br>
 
         <div className='MAINCARDS'>
           {FoodMenu.map((item, i)=>

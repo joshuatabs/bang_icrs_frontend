@@ -18,7 +18,7 @@ export default function RoomMenu() {
       <header className="App-header">
         <h1> RESERVE A PC NOW!</h1>
 
-        <a href='/roomchoices'><button className='btn2'> Choose a Room! </button></a>
+        <a href='/roomchoices'><button className='btn2'> CHOOSE ROOM </button></a>
 
         <br></br>
         
