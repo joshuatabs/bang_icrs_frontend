@@ -21,6 +21,7 @@ import AdminLogin from './components/pages/Admin/AdminLogin';
 import AboutUs from './components/pages/AboutUs';
 import { useMemo, useState } from 'react';
 import { UserContext } from './UserContext';
+import LandingPage from './components/pages/LandingPage';
 
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
       <UserContext.Provider value={user}>
 
         <Routes>
-          <Route path='/' element={<Login />} />
+          <Route path='/' element={<LandingPage />} />
+          <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<SignUpSide />} />
           <Route path='/dashboard' element={<Dashboard />} />
           <Route path='/paymentmain' element={<PaymentMain />} />
@@ -59,6 +61,7 @@ function App() {
           <Route path='/manageroom' element={<ManageRoom />} />
           <Route path='/adminlogin' element={<AdminLogin />} />
           <Route path='/about' element={<AboutUs />} />
+          <Route path='/adminmenu' element={<LandingPage />} />
         </Routes>
 
       </UserContext.Provider>
