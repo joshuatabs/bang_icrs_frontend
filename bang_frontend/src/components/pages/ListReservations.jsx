@@ -1,33 +1,71 @@
+import '../css/list.css'
 import React, { Component } from 'react';
 import ReservationService from '../services/ListService.js';
+import AdminResponsiveAppBar from './components/AdminResponsiveAppBar';
+import swal from 'sweetalert';
 
-class ListReservations extends Component {
+
+
+
+
+
+export default class ListReservations extends Component {
     constructor(props){
-        super(props);
-        this.state = {reservations: []}
-    }
+        super(props)
 
+        this.state = {reservations: []
+        }
+
+        this.deleteReservation = this.deleteReservation.bind(this);
+       
+    }
+    
+   
+    deleteReservation(reservationid){
+        ReservationService.deleteReservation(reservationid).then(res => {
+            this.setState({reservations: this.state.reservations.filter(reservation => reservation.reservationid !== reservationid)});
+            {
+                swal({
+                    title:"Success",
+                    text: res.data,
+                    icon:"success",
+                    button:"OK!"
+                })
+                
+            }
+        });
+    }
+    
+    
+  
+    
     componentDidMount(){
         ReservationService.getReservations().then((res) =>{
             this.setState({reservations:res.data})
+            console.log(res.data)
         });
     
         
     }
+    
+    
     render() {
+        
         return (
-            <div>
+            <div className='App-header'>
                 
-                <h2 className = "App">Reservation List</h2>
                 
+                <AdminResponsiveAppBar/>
                 <div className = "App">
-                    <table className="table table-striped table-bordered">
+                <h1 className = "text">Reservations Data</h1>
+                    <table className="tbl" >
                         <thead>
+                            
                             <tr>
                                 <th>Reservation ID</th>
-                                <th>Room ID</th>
                                 <th>Date</th>
                                 <th>Time</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
 
@@ -35,11 +73,16 @@ class ListReservations extends Component {
                             {
                                 this.state.reservations.map(
                                     reservation =>
-                                    <tr key = {reservation.id}>
-                                            <td>{reservation.id}</td>
-                                            <td>{reservation.roomId}</td>
+                                    <tr key = {reservation.reservationid}>
+                                            <td>{reservation.reservationid}</td>
                                             <td>{reservation.date}</td>
                                             <td>{reservation.time}</td>
+
+                                        <td>
+                                             <button onClick ={() => this.deleteReservation (reservation.reservationid)} className = "btn btn-danger" > Delete</button>
+                                             
+                                         </td>
+                                        
                                     </tr>
                                 )
                             }
@@ -53,5 +96,3 @@ class ListReservations extends Component {
     }
     
 }
-
-export default ListReservations;
