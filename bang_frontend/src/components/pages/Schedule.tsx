@@ -7,17 +7,6 @@ function Schedule() {
 
   const NEW_URL = 'http://localhost:8080/venue/newVenue';
 
-  const [venue, setVenue] = useState([{
-    venueid: '',
-    date: '',
-    payment: {
-      type: '',
-      amount: '',
-      paymentID: '',
-      createDate: ''
-    }
-  }]);
-
   const Rent = async (amount: string, duration:string) => {
 
     axios
@@ -27,8 +16,6 @@ function Schedule() {
       .then(res => {
 
         if (res.data) {
-
-          setVenue(res.data);
 
           alert("Successfully Rented!");
 
