@@ -1,4 +1,3 @@
-import AdminNavbar from '../../global/AdminNavbar';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import '../../css/Admin.css';
@@ -82,12 +81,12 @@ function ManageRoom() {
 
   return (
       <div className="App">
-              <AdminNavbar/>
 
           <header className="App-header">
 
               <br></br>
 
+              <a className='link' href='/adminmenu'>Back to Admin Menu</a>
               <div className='table'>
 
                   <table className='tbl'>

@@ -23,6 +23,7 @@ import { useMemo, useState } from 'react';
 import { UserContext } from './UserContext';
 import LandingPage from './components/pages/LandingPage';
 import AdminMenu from './components/pages/Admin/AdminMenu';
+import Footer from './components/pages/Footer';
 
 
 function App() {
@@ -66,7 +67,15 @@ function App() {
         </Routes>
 
       </UserContext.Provider>
+
+      <footer className='footer'>
+
+        <Footer/>
+
+      </footer>
+
     </div>
+    
   );
 }
 

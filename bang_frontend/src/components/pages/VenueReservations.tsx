@@ -87,7 +87,7 @@ function VeneuReservations() {
 
             <header className="App-header">
                 
-                <a href='/adminmenu'>Back to Admin Menu</a>
+                <a className='link' href='/adminmenu'>Back to Admin Menu</a>
                 <div className='table'>
                     <table className='tbl'>
 
