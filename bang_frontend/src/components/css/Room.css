@@ -4,12 +4,13 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
 .App-link {
@@ -31,11 +32,6 @@
 }
 
 .choices2{
-  display: flex;
-  flex-direction: row;
-}
-
-.choices3{
   display: flex;
   flex-direction: row;
 }
@@ -126,8 +122,8 @@
   transform: translateY(0);
 }
 
-.high{
-  margin-top: -10%;
+.select{
+  margin-top: 5%;
 }
 
 h4{

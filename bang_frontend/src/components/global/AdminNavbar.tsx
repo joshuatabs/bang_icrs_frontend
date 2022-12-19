@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from '../logo/BangLogo.png';
 
-const pages = ['View Room', 'Add Room', 'Edit Room', 'Delete Room'];
+const pages = ['View Room', 'Add Room'];
 const settings = ['Logout'];
 
 function AdminResponsiveAppBar() {
@@ -131,23 +131,6 @@ function AdminResponsiveAppBar() {
               href="/addroom"
             >
               Add Room
-            </Button>
-
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/editroom"
-            >
-              Edit Room
-            </Button>
-
-            <Button
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 600, fontSize: 16, top: 2, marginLeft: 2 }}
-              href="/deleteroom"
-            >
-              Delete Room
-
             </Button>
 
           </Box>

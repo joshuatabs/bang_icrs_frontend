@@ -14,7 +14,7 @@ export default function Dashboard() {
       <ResponsiveAppBar/>
       <header className="App-header">
         <h1> WELCOME TO BANG! </h1>
-        <h3> Reserve a PC Now! </h3>
+        <h3> Games | Food | Experience </h3>
         <br></br>
         <div className='CARDS'> 
           {iCard.map((item, i)=>

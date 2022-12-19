@@ -6,20 +6,20 @@ import '../../css/Admin.css';
 
 function ViewRoom() {
 
-  const GET_URL = 'http://localhost:8080/venue/getVenues';
-  const DELETE_URL = 'http://localhost:8080/venue/deleteVenue/';
-  const UPDATE_URL = 'http://localhost:8080/payment/updatePayment?paymentID=';
+  const GET_URL = 'http://localhost:8080/room/getAllRoom';
+  const DELETE_URL = 'http://localhost:8080/room/deleteRoom/';
+  const UPDATE_URL = 'http://localhost:8080/room/putRoom?roomid=';
 
   useEffect(() => {
 
-      setVenues([]);
-      GetVenues();
+      setRooms([]);
+      GetRooms();
 
   }, []);
 
-  const [venues, setVenues] = useState([{
+  const [room, setRooms] = useState([{
       roomid: '',
-      roomtype: '',
+      code: '',
       floor: '',
   }]);
 
@@ -27,17 +27,17 @@ function ViewRoom() {
       window.location.reload();
   }
 
-  const GetVenues = async () => {
+  const GetRooms = async () => {
 
       const res = await axios.get(GET_URL);
 
       if (res.data) {
-          setVenues(res.data)
+          setRooms(res.data)
           console.log(res.data)
       }
   }
 
-  const DeleteVenue = async (room_id: string) => {
+  const DeleteRoom = async (room_id: string) => {
 
       const res = await axios.delete(DELETE_URL + '' + room_id);
 
@@ -52,19 +52,19 @@ function ViewRoom() {
 
   }
 
-  const UpdateVenue = async (roomtype: string, room_id: string) => {
+  const UpdateRoom = async (code: string, room_id: string) => {
 
-      console.log(roomtype)
+      console.log(code)
       console.log(room_id)
 
-      const amount = prompt('Enter New Value');
+      const floor = prompt('Enter New Value');
 
-      if (amount !== '') {
+      if (floor !== '') {
 
           axios
               .put(UPDATE_URL + '' + room_id, {
-                roomtype,
-                amount,
+                code,
+                floor,
               })
               .then(res => {
                   if (res.data) {
@@ -100,14 +100,14 @@ function ViewRoom() {
                               <th colSpan={2}>Manage</th>
                           </tr>
 
-                          {venues.map((venue, i) =>
+                          {room.map((room, i) =>
 
                               <tr key={i}>
-                                  <td>{venue.roomid}</td>
-                                  <td>{venue.roomtype}</td>
-                                  <td>{venue.floor}</td>
-                                  <td><button className='btn3' onClick={() => UpdateVenue(venue.roomtype, venue.floor)}>EDIT</button></td>
-                                  <td><button className='btn3' onClick={() => DeleteVenue(venue.roomid)}>DELETE</button></td>
+                                  <td>{room.roomid}</td>
+                                  <td>{room.code}</td>
+                                  <td>{room.floor}</td>
+                                  <td><button className='btn3' onClick={() => UpdateRoom(room.code, room.floor)}>EDIT</button></td>
+                                  <td><button className='btn3' onClick={() => DeleteRoom(room.roomid)}>DELETE</button></td>
                               </tr>
 
                           )}
