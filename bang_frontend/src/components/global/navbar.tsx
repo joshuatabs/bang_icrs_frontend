@@ -37,7 +37,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" style={{ background: '#7289DA' }}>
+    <AppBar position="static" style={{ background: '#5f8ab8' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <img style={{ width: 80, height: 80 }} src={logo} alt="Logo" />
@@ -114,11 +114,12 @@ function ResponsiveAppBar() {
           >
             LOGO
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+
+          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, marginLeft:'14rem'}}>
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Segoe UI', fontWeight: 400, fontSize: 16, top: 2 }}
               href="/dashboard"
             >
               Home
@@ -126,7 +127,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Segoe UI', fontWeight: 400, fontSize: 16, top: 2 }}
               href="/roommenu"
             >
               Reserve
@@ -134,7 +135,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Segoe UI', fontWeight: 400, fontSize: 16, top: 2 }}
               href="/rent"
             >
               Rent Venue
@@ -142,7 +143,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Segoe UI', fontWeight: 400, fontSize: 16, top: 2 }}
               href="/foodmainmenu"
             >
               Cafe Menu
@@ -151,7 +152,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Segoe UI', fontWeight: 400, fontSize: 16, top: 2 }}
               href="/yourreservation"
             >
               Your Reservation
@@ -159,7 +160,7 @@ function ResponsiveAppBar() {
 
             <Button
               onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Montserrat', fontWeight: 300, fontSize: 16, top: 2 }}
+              sx={{ my: 2, color: 'white', display: 'block', fontFamily: 'Segoe UI', fontWeight: 400, fontSize: 16, top: 2 }}
               href="/about"
             >
               About Us

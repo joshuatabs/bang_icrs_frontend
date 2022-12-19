@@ -16,9 +16,7 @@ export default function RoomMenu() {
       <ResponsiveAppBar/>
 
       <header className="App-header">
-        <h1> Reserve a PC now!</h1>
-
-        <h4>Games | Food | Experience</h4>
+        <h1> RESERVE A PC NOW!</h1>
 
         <a href='/roomchoices'><button className='btn2'> Choose a Room! </button></a>
 
