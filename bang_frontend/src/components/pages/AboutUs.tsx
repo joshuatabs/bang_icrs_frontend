@@ -4,8 +4,6 @@ import { Typography } from "@mui/material";
 import ResponsiveAppBar from '../global/navbar';
 import AboutCard from '../global/AboutCard';
 
-
-
 export default function About() {
     const { scrollYProgress } = useScroll();
     const scaleX = useSpring(scrollYProgress, {
