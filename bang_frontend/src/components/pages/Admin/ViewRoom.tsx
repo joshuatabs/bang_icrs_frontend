@@ -52,12 +52,13 @@ function ViewRoom() {
 
   }
 
-  const UpdateRoom = async (code: string, room_id: string) => {
+  const UpdateRoom = async (room_id: string) => {
 
       console.log(code)
       console.log(room_id)
 
-      const floor = prompt('Enter New Value');
+      const floor = prompt('Enter New Floor');
+      const code = prompt('Enter New Code');
 
       if (floor !== '') {
 
@@ -106,7 +107,7 @@ function ViewRoom() {
                                   <td>{room.roomid}</td>
                                   <td>{room.code}</td>
                                   <td>{room.floor}</td>
-                                  <td><button className='btn3' onClick={() => UpdateRoom(room.code, room.floor)}>EDIT</button></td>
+                                  <td><button className='btn3' onClick={() => UpdateRoom(room.roomid)}>EDIT</button></td>
                                   <td><button className='btn3' onClick={() => DeleteRoom(room.roomid)}>DELETE</button></td>
                               </tr>
 
