@@ -1,6 +1,6 @@
+import '../css/Room.css';
 import axios from 'axios';
 import ResponsiveAppBar from '../global/navbar';
-import '../css/Room.css';
 
 function RoomChoices() {
 
@@ -34,16 +34,17 @@ function RoomChoices() {
     <div className="App">
       <ResponsiveAppBar/>
       <header className="App-header">
-
-        <h1 className='select'> SELECT ROOM </h1>
+        <div className='room'>
+            <h1> SELECT ROOM </h1><br/>
+        </div>
 
         <div className='choices1'>
-          <button onClick={() => Room('Public Room', '1st Floor')} className='btn'>Public Room</button> 
-          <button onClick={() => Room('Private Room', '2nd Floor')} className='btn'>Private Room</button> 
+          <a href='/payment'><button onClick={() => Room('Public Room', '1st Floor')} className='btn2'>Public Room</button> </a>
+          <a href='/payment'><button onClick={() => Room('Private Room', '2nd Floor')} className='btn2'>Private Room</button> </a>
         </div>
 
         <div className='choices2'>
-          <button onClick={() => Room('Tournament Room', '3rd Floor')} className='btn'>Tournament Room</button> 
+          <a href='/payment'><button onClick={() => Room('Tournament Room', '3rd Floor')} className='btn2'>Tournament Room</button> </a>
         </div>
         <br></br>
 
