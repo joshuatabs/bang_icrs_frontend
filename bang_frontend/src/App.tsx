@@ -27,12 +27,12 @@ import Footer from './components/pages/Footer';
 
 function App() {
 
-  const [user, setUser] = useState([{}]);
+  const [user, setUser] = useState<string | null>(null)
 
   return (
     <div className="App">
 
-      <UserContext.Provider value={[{user, setUser}]}>
+      <UserContext.Provider value={{user, setUser}}>
 
         <Routes>
           <Route path='/' element={<LandingPage />} />

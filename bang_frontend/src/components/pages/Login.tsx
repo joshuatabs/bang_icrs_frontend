@@ -30,7 +30,7 @@ export default function SignInSide() {
   const navigate = useNavigate();
   const [logged, setLogged] = useState(false);
 
-  const [user, setUser] = useContext(UserContext);
+  const userContext = useContext(UserContext);
 
   const [loginData, setLoginData] = useState({
       username: "",
@@ -61,7 +61,7 @@ export default function SignInSide() {
                       //  password: res.data.password,
                        // userType: res.data.userType,
                       //});
-
+                      userContext?.setUser(result.data.userid)
                       setLogged(true);
                       alert("User Login Success");
                       navigate("/dashboard");

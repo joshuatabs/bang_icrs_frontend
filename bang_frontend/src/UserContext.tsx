@@ -1,3 +1,8 @@
 import {createContext} from 'react'
 
-export const UserContext = createContext([{}]);
+type UserContextType = {
+    user: string | null,
+    setUser: React.Dispatch<React.SetStateAction<string | null>>
+}
+
+export const UserContext = createContext<UserContextType | null>(null);

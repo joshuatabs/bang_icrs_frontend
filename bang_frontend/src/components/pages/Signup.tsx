@@ -33,6 +33,7 @@ export default function SignUpSide() {
         {
           username: user,
           password: pass,
+          userType:'Client',
           firstname: fname,
           lastname: lname,
           email: email
