@@ -3,6 +3,9 @@ import {Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBase
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import '../../css/Admin.css';
 import logo from '../../logo/BangLogo.png';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import axios from 'axios';
 
 function Copyright(props: any) {
   return (
@@ -20,7 +23,57 @@ function Copyright(props: any) {
 const theme = createTheme();
 
 export default function SignInSide() {
+  const navigate = useNavigate();
+  const [logged, setLogged] = useState(false);
 
+  const [loginData, setLoginData] = useState({
+      username: "",
+      password: ""
+  });
+
+  const { username, password } = loginData;
+
+  const onInputChange = (e: any) => {
+      setLoginData({...loginData, [e.target.name]: e.target.value });
+  };
+
+  const checkSignIn = async (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    if (username.trim().length !== 0  && password.trim().length !== 0) {
+      axios.get(`http://localhost:8080/user/findByUsername?username=${username}`)
+      .then((result) => {
+          if(result.data.username !== null) { // Check if username exist
+              console.log(result.data)
+              if(result.data.password === password) { // Check if password is correct
+                  if(result.data.userType === "Admin") { // Check user type login is correct
+                      //handleSetUser({ //this is for useContext
+                      //  userid: res.data.userid,
+                      //  firstname: res.data.firstname,
+                       // lastname: res.data.lasttname,
+                      //  email: res.data.email,
+                      //  username: res.data.username,
+                      //  password: res.data.password,
+                       // userType: res.data.userType,
+                      //});
+                      setLogged(true);
+                      alert("User Login Success");
+                      navigate("/adminmenu");
+                    }else {
+                      alert("User Login Error (Wrong user type login))")
+                    }
+                  }else {
+                    alert("Invalid login credentials! Please check.")
+                  }
+                } else {
+                  alert("User does not exist! ")
+                }
+      }).catch(err => {
+        console.log(err)
+      })
+  }else {
+    alert("Fill up fields first!")
+  }
+}
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
