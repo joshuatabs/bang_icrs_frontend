@@ -4,6 +4,8 @@ import {createTheme, ThemeProvider } from '@mui/material/styles';
 import logo from '../logo/BangLogo.png';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 import { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright(props: any) {
   return (
@@ -24,6 +26,58 @@ export default function SignInSide() {
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
+  const navigate = useNavigate();
+  const [logged, setLogged] = useState(false);
+
+  const [loginData, setLoginData] = useState({
+      username: "",
+      password: ""
+  });
+
+  const { username, password } = loginData;
+
+  const onInputChange = (e: any) => {
+      setLoginData({...loginData, [e.target.name]: e.target.value });
+  };
+
+  const checkSignin = async (event: { preventDefault: () => void; }) => {
+    event.preventDefault();
+    if (username.trim().length !== 0  && password.trim().length !== 0) {
+      axios.get(`http://localhost:8080/user/findByUsername?username=${username}`)
+      .then((result) => {
+          if(result.data.username !== null) { // Check if username exist
+              console.log(result.data)
+              if(result.data.password === password) { // Check if password is correct
+                  if(result.data.userType === "Client") { // Check user type login is correct
+                      //handleSetUser({ //this is for useContext
+                      //  userid: res.data.userid,
+                      //  firstname: res.data.firstname,
+                       // lastname: res.data.lasttname,
+                      //  email: res.data.email,
+                      //  username: res.data.username,
+                      //  password: res.data.password,
+                       // userType: res.data.userType,
+                      //});
+                      setLogged(true);
+                      alert("User Login Success");
+                      navigate("/dashboard");
+                    }else {
+                      alert("User Login Error (Wrong user type login))")
+                    }
+                  }else {
+                    alert("Invalid login credentials! Please check.")
+                  }
+                } else {
+                  alert("User does not exist! ")
+                }
+      }).catch(err => {
+        console.log(err)
+      })
+  }else {
+    alert("Fill up fields first!")
+  }
+}
+
   return (
     <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
@@ -64,6 +118,7 @@ export default function SignInSide() {
                 name="username"
                 autoComplete="user"
                 autoFocus
+                onChange={(e) => onInputChange(e)}
               />
               <TextField
                 margin="normal"
@@ -74,6 +129,7 @@ export default function SignInSide() {
                 type={showPassword ? 'text' : 'password'}
                 id="password"
                 autoComplete="current-password"
+                onChange={(e) => onInputChange(e)}
                 InputProps={{
                   endAdornment: (
                     <InputAdornment position="end">
@@ -97,6 +153,7 @@ export default function SignInSide() {
                 variant="contained"
                 sx={{ mt: 3, mb: 2, backgroundColor: "Green" }}
                 href ='/dashboard'
+                onClick={checkSignin}
               >
                 Sign In
               </Button>
