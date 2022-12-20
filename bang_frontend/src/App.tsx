@@ -24,6 +24,7 @@ import { UserContext } from './UserContext';
 import LandingPage from './components/pages/LandingPage';
 import AdminMenu from './components/pages/Admin/AdminMenu';
 import Footer from './components/pages/Footer';
+import YourReservations from './components/pages/YourReservations';
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
           <Route path='/adminlogin' element={<AdminLogin />} />
           <Route path='/about' element={<AboutUs />} />
           <Route path='/adminmenu' element={<AdminMenu />} />
+          <Route path='/yourreservation' element={<YourReservations />} />
         </Routes>
 
       </UserContext.Provider>

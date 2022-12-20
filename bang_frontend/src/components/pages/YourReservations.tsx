@@ -88,7 +88,8 @@ function VeneuReservations() {
             <header className="App-header">
 
                 <br></br>
-
+                
+                <a className='link' href='/adminmenu'>Back to Admin Menu</a>
                 <div className='table'>
 
                     <table className='tbl'>
@@ -100,7 +101,6 @@ function VeneuReservations() {
                                 <th>Reservation Type</th>
                                 <th>Amount Paid</th>
                                 <th>Date Added</th>
-                                <th colSpan={2}>Manage</th>
                             </tr>
 
                             {venues.map((venue, i) =>
@@ -110,8 +110,6 @@ function VeneuReservations() {
                                     <td>{venue.payment.type}</td>
                                     <td>{venue.payment.amount}</td>
                                     <td>{venue.date}</td>
-                                    <td><button className='btn3' onClick={() => UpdateVenue(venue.payment.type, venue.payment.paymentID)}>EDIT</button></td>
-                                    <td><button className='btn3' onClick={() => DeleteVenue(venue.venueid)}>DELETE</button></td>
                                 </tr>
 
 

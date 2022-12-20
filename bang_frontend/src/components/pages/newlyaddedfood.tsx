@@ -17,7 +17,7 @@ export interface NewFoodCardDetails{
 
 function Newlyaddedfood() {
     const [food, setFood] = useState([{
-        title: "string",
+        name: "string",
         description: "test",
         price: 0,
         id: 0,
@@ -45,12 +45,12 @@ function Newlyaddedfood() {
             <div className='Sidebar'><Sidebar></Sidebar></div> 
             <div className='RIANCARDS'>
                 {food.map((item, i) =>
-                    <Card key={i} id={item.id} title={item.title} image={'/static/Drinks/coke.png'} description={item.description} />
+                    <Card key={i} id={item.id} title={item.name} image={'/static/Drinks/coke.png'} description={item.description} />
                 )}
             </div>
             <div className='RIANCARDS'>
                 {food.map((item, i) =>
-                    <Card key={i}  id={item.id} title={item.title} image={'/static/Drinks/coke.png'} description={item.description} />
+                    <Card key={i}  id={item.id} title={item.name} image={'/static/Drinks/coke.png'} description={item.description} />
                 )}
             </div>
             
