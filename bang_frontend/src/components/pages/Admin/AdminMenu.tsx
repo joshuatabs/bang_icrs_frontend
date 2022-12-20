@@ -6,7 +6,7 @@ function LandingPage() {
         <div className="App">
 
             <div className='logoDiv'>
-                <img src='/static/images/BangLogo.png' className='logo' />
+                <img src='/static/images/BangLogo.png' className='logo' alt='logo' />
                 <div className='welcome'> <h1>HELLO ADMIN</h1></div>
             </div>
 

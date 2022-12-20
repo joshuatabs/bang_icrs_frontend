@@ -7,7 +7,7 @@ function LandingPage() {
 
             <header className="App-header">
 
-                <img src='/static/images/BangLogo.png' className='App-logo'/>
+                <img src='/static/images/BangLogo.png' className='App-logo' alt="logo"/>
                 <h1>LOGIN AS</h1>
 
                 <div className='choices1'>

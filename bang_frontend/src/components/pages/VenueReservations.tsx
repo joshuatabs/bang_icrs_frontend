@@ -62,7 +62,7 @@ function VeneuReservations() {
 
         const amount = prompt('Enter New Value');
 
-        if (amount != '') {
+        if (amount !== '') {
 
             axios
                 .put(UPDATE_URL + '' + payment_id, {
