@@ -28,6 +28,7 @@ export default function SignInSide() {
   const handleClickShowPassword = () => setShowPassword(!showPassword);
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
   const navigate = useNavigate();
+  
   const [logged, setLogged] = useState(false);
 
   const userContext = useContext(UserContext);
