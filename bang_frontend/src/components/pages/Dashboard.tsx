@@ -1,5 +1,7 @@
 import ResponsiveAppBar from '../global/navbar';
 import Card, { CardDetails } from '../global/DashCard';
+import { useContext } from 'react';
+import { UserContext } from '../../UserContext';
 
 export default function Dashboard() {
 
