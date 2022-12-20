@@ -3,9 +3,10 @@ import {Button, TextField, Checkbox, Link, Paper, Box, Grid, Typography, CssBase
 import {createTheme, ThemeProvider } from '@mui/material/styles';
 import logo from '../logo/BangLogo.png';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { UserContext } from '../../UserContext';
 
 function Copyright(props: any) {
   return (
@@ -28,6 +29,8 @@ export default function SignInSide() {
   const handleMouseDownPassword = () => setShowPassword(!showPassword);
   const navigate = useNavigate();
   const [logged, setLogged] = useState(false);
+
+  const [user, setUser] = useContext(UserContext);
 
   const [loginData, setLoginData] = useState({
       username: "",
@@ -58,6 +61,7 @@ export default function SignInSide() {
                       //  password: res.data.password,
                        // userType: res.data.userType,
                       //});
+
                       setLogged(true);
                       alert("User Login Success");
                       navigate("/dashboard");
