@@ -24,7 +24,6 @@ import { UserContext } from './UserContext';
 import LandingPage from './components/pages/LandingPage';
 import AdminMenu from './components/pages/Admin/AdminMenu';
 import Footer from './components/pages/Footer';
-import { UserContext } from './UserContext';
 
 function App() {
 
