@@ -19,28 +19,21 @@ import VeneuReservations from './components/pages/VenueReservations';
 import ManageRoom from './components/pages/Admin/ManageRoom';
 import AdminLogin from './components/pages/Admin/AdminLogin';
 import AboutUs from './components/pages/AboutUs';
-import {useState } from 'react';
+import { useMemo, useState } from 'react';
 import { UserContext } from './UserContext';
 import LandingPage from './components/pages/LandingPage';
 import AdminMenu from './components/pages/Admin/AdminMenu';
 import Footer from './components/pages/Footer';
-
+import { UserContext } from './UserContext';
 
 function App() {
 
-  const [user, setUser] = useState([{
-    userid:'',
-    username:'',
-    password:'',
-    firstname:'',
-    lastname:'',
-    email:'',
-  }]);
+  const [user, setUser] = useState([{}]);
 
   return (
     <div className="App">
 
-      <UserContext.Provider value={user}>
+      <UserContext.Provider value={[{user, setUser}]}>
 
         <Routes>
           <Route path='/' element={<LandingPage />} />
