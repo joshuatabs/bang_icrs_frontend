@@ -27,6 +27,8 @@ function Schedule() {
           alert("You will be contacted for further informations about your reservation via email!"+
                 "\nThank you!");
 
+        console.log(res.data)
+
         }
 
       })
