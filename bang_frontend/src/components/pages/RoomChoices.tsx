@@ -39,12 +39,12 @@ function RoomChoices() {
         </div>
 
         <div className='choices1'>
-          <a href='/payment'><button onClick={() => Room('Public Room', '1st Floor')} className='btn2'>Public Room</button> </a>
-          <a href='/payment'><button onClick={() => Room('Private Room', '2nd Floor')} className='btn2'>Private Room</button> </a>
+          <button onClick={() => Room('Public Room', '1st Floor')} className='btn2'>Public Room</button>
+          <button onClick={() => Room('Private Room', '2nd Floor')} className='btn2'>Private Room</button>
         </div>
 
         <div className='choices2'>
-          <a href='/payment'><button onClick={() => Room('Tournament Room', '3rd Floor')} className='btn2'>Tournament Room</button> </a>
+          <button onClick={() => Room('Tournament Room', '3rd Floor')} className='btn2'>Tournament Room</button>
         </div>
         <br></br>
 
